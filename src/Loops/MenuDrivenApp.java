@@ -41,8 +41,7 @@ class Bank{
 		System.out.println("Enter How much amount u want withdraw:");
 		amount=sc.nextInt();
 		if(amount>balance) {
-			System.out.println("OOPS!!!Transaction Cancelled due 
-			to insufficient amount(:(:(:(:");
+			System.out.println("OOPS!!!Transaction Cancelled due to insufficient amount(:(:(:(: " ); 
 		}
 		else {
 			balance-=amount;
