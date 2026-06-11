@@ -8,7 +8,7 @@ class Menu{
 	String MenuType;
 	int price;
 	int qty;
-	Scanner sc=new Scanner(System.in)
+	Scanner sc=new Scanner(System.in);
 	
 
 void display() {
