@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelector()</title>
+</head>
+<body>
+    <p id="msg">Hi ,Buddy H r u???</p>
+    <h1 class="course">Java</h1>
+    <h2 class="course">Python</h2>
+    <h3 class="course">PHP</h3>
+
+    <script>
+        let x=document.querySelector("#msg");
+        x.style.color="blue";
+        /*let y=document.querySelector(".course");
+
+        y.style.backgroundColor="violet"*/x
+        let y=document.querySelectorAll(".course")
+
+       
+        y.forEach(function(elements){
+           elements.style.color="green" ;
+           elements.style.border="2px solid red";
+             elements.style.textAlign="center";
+               elements.style.padding="10px";
+        })
+    </script>
+</body>
+</html>

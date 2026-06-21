@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>enum</title>
+</head>
+
+<body>
+    <h1>enum</h1>
+    <script>
+        const Colors = {
+RED: 'red',
+BLUE: 'blue',
+GREEN: 'green'
+
+};
+
+console.log(typeof(Colors))
+
+console.log(Colors.RED);
+
+const UserRoles = {
+ADMIN: 'admin',
+MEMBER: 'member',
+GUEST: 'guest',
+};
+function hasAdminAccess(userRole) {
+return userRole === UserRoles.ADMIN;
+}
+const user1 = {
+name: 'Sling Academy',
+role: UserRoles.ADMIN,
+};
+if (hasAdminAccess(user1.role)) {
+console.log('User1 has admin access');
+// do some admin stuff
+} else {
+console.log('User1 does NOT have permission to access this page');
+}
+const user2 = {
+name: 'Blazing Bull',
+role: UserRoles.GUEST,
+};
+if (hasAdminAccess(user2.role)) {
+console.log('User2 has admin access');
+// do some admin stuff
+} else {
+console.log('User2 does NOT not have permission to access this page');
+}
+    </script>
+</body>
+</html>

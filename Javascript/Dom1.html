@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="lang">Java is oops</p>
+    <p class="lang">Html is Markup language</p>
+    <p class="lang">Css is cascading stylesheet</p>
+    
+<script>
+    let x=document.getElementsByClassName("lang")
+    console.log(x[0].innerHTML);
+
+    document.getElementsByClassName("lang")[0].style.color="red"
+
+    for(var i=0;i<x.length;i++){
+        x[i].style.color="green";
+        x[i].style.fontSize="30px"
+        x[i].style.backgroundColor="bisque"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <button class="btn btn-outline-primary" onclick="inc()">Increment</button>
+    <button class="btn btn-outline-primary" onclick="dec()">Decrement</button>
+
+    <p id="p1">Count is : </p>
+
+    <script>
+        var counter=0;
+        function inc(){
+            
+            counter++;
+            document.getElementById("p1").innerHTML=counter
+        }
+         function dec(){
+            
+            counter--;
+             document.getElementById("p1").innerHTML=counter
+        }
+    </script>
+</body>
+</html>
