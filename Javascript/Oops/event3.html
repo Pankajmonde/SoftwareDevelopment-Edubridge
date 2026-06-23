@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Object</title>
+</head>
+<body>
+    <button id="btn">Click Me</button>
+    <input id="text">
+    <script>
+        let x=document.getElementById("btn");
+        x.addEventListener("click",function(event){
+
+           console.log(event.type)
+        })
+        let txt=document.getElementById("text");
+        txt.addEventListener("keyup",function(event){
+            console.log(event.target)
+        })
+    </script>
+</body>
+</html>

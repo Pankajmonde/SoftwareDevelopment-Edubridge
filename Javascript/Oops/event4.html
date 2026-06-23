@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling</title>
+</head>
+<body>
+    
+    <div id="parent">
+      <button id="child">Submit/Click</button>
+   
+    </div>
+    <script>
+        let p=document.getElementById("parent");
+        let c=document.getElementById("child")
+        let para=document.getElementById("p");
+        p.addEventListener("click",function()
+        {
+            console.log("Parent/div called")
+        });
+        c.addEventListener("click",function(){
+            console.log("Child/button called")
+        })
+       
+    </script>
+</body>
+</html>

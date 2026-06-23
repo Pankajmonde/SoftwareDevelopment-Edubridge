@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form onsubmit="return validate()">
+<input type="text" id="fname">
+<button type="submit">Submit</button>
+<textarea id="info"></textarea>
+<p id="p" style="background-color:aqua ;">Count character length</p>
+    </form>
+    <img id="i" src="img/image.png" width="600" height="400" alt="image not find">
+    <script>
+
+           //validation
+
+function validate(){
+    let user=document.getElementById("fname").value;
+
+    if(user ==""){
+        alert("Please Enter Name");
+        return false
+    }
+    return true;
+}
+let image=document.getElementById("i");
+
+image.addEventListener("mouseover",function(){
+
+    image.src="img/imgg2.png"
+});
+let app=document.getElementById("info");
+app.addEventListener("keyup",function(){
+
+    document.getElementById("p").innerHTML=app.value.length;
+})
+    </script>
+ 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    
+</head>
+<body>
+    <button onclick="msg()" >Click</button>
+    <button id="btn">Submit </button>
+    <button id="msg">Message Display</button>
+    <button id="dc" onclick="changeColor()" >Double Click</button>
+    <script>
+        function msg(){
+    alert("Message Submitted successfully")
+}
+let x=document.getElementById("btn");
+x.onclick=function(){
+    alert("Button clicked With Dom Property")
+}
+
+let y=document.getElementById("msg");
+
+y.onclick=function(){
+    document.getElementById("msg").innerHTML="Hey Buddy H r u??";
+
+
+}
+function changeColor(){
+    document.body.style.background="bisque"
+}
+
+    </script>
+</body>
+</html>
