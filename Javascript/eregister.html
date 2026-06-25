@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registartion Here</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <h1 style="background-color: wheat;">Registration Form</h1>
+<form>
+  <div class="mb-3">
+    <label for="Name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" >
+    </div>
+    <div class="mb-3">   
+        <label for="email" class="form-label">Email
+
+    </label>
+    <input type="text" class="form-control" id="email" >
+</div>
+  <div class="mb-3">
+        <label for="mobile" class="form-label">Mobile</label>
+    <input type="text" class="form-control" id="mobile" >
+  </div>
+
+      <div class="mb-3">
+        <label for="pass" class="form-label">Password</label>
+    <input type="password" class="form-control" id="password" >
+      </div>
+      <div class="mb-3">
+        <label for="pass" class="form-label">Confirm Password</label>
+    <input type="password" class="form-control" id="confirmPassword" >
+      </div>
+<div class="mb-3">
+
+    <button type="button" class="btn btn-primary" onclick="register()">Submit</button>
+</div>
+<div class="mb-3">
+    <p id="errormsg" style="color:red;font-size: xx-large;"></p>
+</div>
+</form>
+  <script>
+   function register(){
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let mobile=document.getElementById("mobile").value;
+    let password=document.getElementById("password").value;
+    let confirmpassword=document.getElementById("confirmPassword").value;
+
+    try{
+     if(name==""){
+        throw "Name Required";
+     }
+     if(email==""){
+        throw "Email Id Required";
+     }
+     if(!email.includes("@")||!email.includes(".")){
+        throw "Invalid Email ID";
+     }
+     if(mobile==""){
+        throw "Mobile Number Required";
+     }
+     if(mobile.length!=10){
+        throw "Mobile number is incoreect it must be 10 digit"
+     }
+     if(isNaN(mobile)){
+        throw "only numbers Allowed";
+     }
+     if(password==""){
+        throw "password Required"
+     }
+     if(password.length<8){
+        throw "Password Must at least 8 characters"
+     }
+     if(password!=confirmpassword){
+        throw "Password does not Match"
+     }
+     alert("Registration done successfuuly")
+
+    }catch(error){
+        console.log(error)
+        document.getElementById("errormsg").innerText=error;
+    }
+    
+
+finally{
+    console.log("Register and Validation Done!!!!!")
+}
+   } 
+  </script>
+
+</body>
+</html>

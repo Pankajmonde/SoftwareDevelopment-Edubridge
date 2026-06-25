@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calling Function</title>
+</head>
+<body>
+    <h1>Addition Using Callback function()</h1>
+    Number1:
+    <input type="text" id="num1">
+    <hr>
+    Number2:
+    <input type="text" id="num2">
+    <hr>
+    <button type="submit" onclick="callNUmbers()">Sum</button>
+    <hr>
+    <h2 id="output"></h2>
+<script>
+    function add(sum){
+        document.getElementById("output").innerHTML="Addition is:"+sum;
+
+    }
+    function calci(a,b,callback){
+        let sum=a+b;
+        callback(sum)
+    }
+    function callNUmbers(){
+        let num1=Number(document.getElementById("num1").value);
+        let num2=Number(document.getElementById("num2").value);
+        calci(num1,num2,add)
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email validation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+</head>
+<body>
+    <input type="email" id="emailId" class="form-control" placeholder="Enter Email ID">
+    <br>
+        <butoon type="submit" onclick="validateemail()" class="btn btn-success">ValidateYourEmailID</butoon>
+    
+        <script>
+            function validateemail(){
+                let email=document.getElementById("emailId").value;
+                try{
+                  if(email==""){
+                    throw "Email required"
+                  }
+                  if(!email.includes("@")||!email.includes(".")){
+                    throw "Invalid Email ID"
+                  }
+                  alert("Email ID is correct")
+                }catch(error)
+                {
+                    console.log(error)
+                }
+                finally{
+                    console.log("Validation done")
+                }
+            }
+                </script>
+            
+</body>
+</html>
